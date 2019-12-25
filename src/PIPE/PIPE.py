@@ -1,4 +1,4 @@
-from src2.NODE.NODE import NODE
+from src.NODE.NODE import NODE
 
 class PIPE(object):
     def __init__(self, form):

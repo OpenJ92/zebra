@@ -1,4 +1,4 @@
-from src2.MAP.MAP import MAP
+from src.MAP.MAP import MAP
 
 class NODE(object):
     def __init__(self, form):

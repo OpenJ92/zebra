@@ -5,7 +5,7 @@ PIPE1:
                         _from: []
                         _to: [TRANSLATE_2]
                 _class:
-                        package: src2.NODE.test 
+                        package: src.NODE.test 
                         name: test
                 _init:
                         param_a: in 
@@ -16,11 +16,11 @@ PIPE1:
 
         - TRANSLATE_2: ## (Transform)
                 _node:
-                        _on: [Data2]
+                        _on: [Data1]
                         _from: [HEAD]
                         _to: [TRANSLATE]
                 _class:
-                        package: src2.NODE.test 
+                        package: src.NODE.test 
                         name: test
                 _init:
                         param_a: in 
@@ -33,11 +33,11 @@ PIPE1:
 
         - TRANSLATE: ## (Transform)
                 _node:
-                        _on: [Data2]
+                        _on: [Data1]
                         _from: [HEAD]
                         _to: [ROTATE]
                 _class:
-                        package: src2.NODE.test 
+                        package: src.NODE.test 
                         name: test
                 _init:
                         param_a: in 
@@ -53,7 +53,7 @@ PIPE1:
                       _from: [TRANSLATE]
                       _to: [TAIL]
                 _class:
-                        package: src2.NODE.test 
+                        package: src.NODE.test 
                         name: test
                 _init:
                       param_a: in 
@@ -67,7 +67,7 @@ PIPE1:
                         _from: [ROTATE]
                         _to: [end]
                 _class:
-                        package: src2.NODE.test 
+                        package: src.NODE.test 
                         name: test
                 _init:
                         param_a: in 

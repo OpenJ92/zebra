@@ -1,8 +1,8 @@
 from yaml import load, FullLoader
 from os.path import expanduser
 
-from src2.NODE.NODE import NODE
-from src2.PIPE.PIPE import PIPE
+from src.NODE.NODE import NODE
+from src.PIPE.PIPE import PIPE
 
 class process(object):
     def __init__(self, conf = None):
