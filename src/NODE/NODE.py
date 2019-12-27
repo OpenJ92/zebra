@@ -17,7 +17,5 @@ class NODE(object):
             print('Hello World!')
         return self._to[0]
 
-
 if __name__ == "src2.NODE.NODE":
     pass
-
