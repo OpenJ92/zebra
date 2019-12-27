@@ -12,7 +12,7 @@ class process(object):
         self._pipe = PIPE(self._config)
 
     def _process_config(self, conf):
-        conf = f"{expanduser('~')}/.dt/config.yml" if not conf else f"{conf}" 
+        conf=f"{expanduser('~')}/.dt/config.yml" if not conf else f"{conf}" 
         with open(conf, 'r') as config:
             return load(config, Loader=FullLoader)
 

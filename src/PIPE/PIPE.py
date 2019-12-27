@@ -15,7 +15,11 @@ class PIPE(object):
         node = self._nodes[f"{self._name}_HEAD"]
         while True: 
             print(Xs, node._name)
-            Xs = {name:(node._map._apply_(data) if name in node._on else data) for name, data in Xs.items()}
+            Xs = {                                                       \
+                  name:                                                  \
+                  (node._map._apply_(data) if name in node._on else data)\
+                  for name, data in Xs.items()                           \
+                  }
             if "TAIL" in node._name:
                 return Xs
             node = self._nodes[f"{self._name}_{next(node)}"]

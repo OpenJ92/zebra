@@ -7,7 +7,6 @@ class NODE(object):
         self.__dict__.update(self._node); del self._node
         self._map = MAP(self._class, self._init, self._apply)
         del self._class; del self._init; del self._apply
-        print(self._name)
 
     def __call__(self):
         return self._name, self._on, self._from, self._to, self
