@@ -1,0 +1,77 @@
+PIPE1:
+        - HEAD:
+                _node:
+                        _on: [Data1, Data2]
+                        _from: []
+                        _to: [TRANSLATE_2]
+                _class:
+                        package: src.NODE.test 
+                        name: test
+                _init:
+                        param_a: in 
+                        param_b: first
+                _apply:
+                        param_c: element
+                        param_d: " "
+
+        - TRANSLATE_2: ## (Transform)
+                _node:
+                        _on: [Data1]
+                        _from: [HEAD]
+                        _to: [TRANSLATE]
+                _class:
+                        package: src.NODE.test 
+                        name: test
+                _init:
+                        param_a: in 
+                        param_b: first
+                _apply:
+                        param_c: element
+                        param_d: " "
+                _conditional_next: None
+
+
+        - TRANSLATE: ## (Transform)
+                _node:
+                        _on: [Data1]
+                        _from: [HEAD]
+                        _to: [ROTATE]
+                _class:
+                        package: src.NODE.test 
+                        name: test
+                _init:
+                        param_a: in 
+                        param_b: first
+                _apply:
+                        param_c: element
+                        param_d: " "
+                _conditional_next: None
+
+        - ROTATE:
+                _node:
+                      _on: [Data2]
+                      _from: [TRANSLATE]
+                      _to: [TAIL]
+                _class:
+                        package: src.NODE.test 
+                        name: test
+                _init:
+                      param_a: in 
+                      param_b: second
+                _apply:
+                      param_c: element
+                      param_d: " "
+        - TAIL:
+                _node:
+                        _on: [Data1, Data2]
+                        _from: [ROTATE]
+                        _to: [end]
+                _class:
+                        package: src.NODE.test 
+                        name: test
+                _init:
+                        param_a: in 
+                        param_b: first
+                _apply:
+                        param_c: element
+                        param_d: " "
