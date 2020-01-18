@@ -18,4 +18,4 @@ class NODE(object):
         return self._to[0]
 
 if __name__ == "src2.NODE.NODE":
-    pass
+	pass
